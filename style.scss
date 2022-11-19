@@ -1038,8 +1038,7 @@ body {
   .contact {
     &__arrow {
       & p {
-        right: 10rem;
-        top: 31rem;
+        display: none;
       }
     }
   }
@@ -1181,8 +1180,7 @@ body {
     }
     &__arrow {
       & p {
-        right: 5rem;
-        top: 25rem;
+        display: none;
       }
     }
   }

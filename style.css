@@ -979,8 +979,7 @@ body {
     width: 75%;
   }
   .contact__arrow p {
-    right: 10rem;
-    top: 31rem;
+    display: none;
   }
   .footer {
     padding: 4rem;
@@ -1112,8 +1111,7 @@ body {
     color: #fff;
   }
   .contact__arrow p {
-    right: 5rem;
-    top: 25rem;
+    display: none;
   }
   .footer {
     padding: 4rem 1rem;
