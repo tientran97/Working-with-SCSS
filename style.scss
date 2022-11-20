@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
 $primary-color: #fe6d6f;
 $text-color: #7c7c7c;
 $heading-color: #282828;
@@ -11,6 +12,7 @@ $input-color: #474b78;
   justify-content: $justify;
   flex-wrap: $wrap;
 }
+
 html {
   font-size: 62.5%;
   color: $text-color;
@@ -29,13 +31,12 @@ img {
   display: block;
   width: 100%;
 }
-body {
-  font-family: "Exo", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
+
 //1440px
 .wrapper {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Exo", sans-serif;
   max-width: 1440px;
   margin: 0rem auto 5rem;
   box-shadow: -5px 5px 15px 3px rgba(0, 0, 0, 0.75);
@@ -57,9 +58,10 @@ body {
   height: 700px;
   background: url(./image/Banner.png) center/ 100% no-repeat;
   &__heading {
-    padding-top: 5rem;
-    font-size: 6rem;
+    font-family: "Exo", sans-serif;
     font-weight: 100;
+    padding-top: 5rem;
+    font-size: 5rem;
     max-width: 60rem;
     margin: 0 auto 3rem;
     text-align: center;
@@ -67,6 +69,8 @@ body {
 
   &__text {
     text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
   }
   &__circle {
     width: 70px;
@@ -89,6 +93,8 @@ body {
   }
 }
 .btn {
+  font-family: "Exo", sans-serif;
+  font-weight: 200;
   padding: 1rem 4rem;
   outline: none;
   border: none;
@@ -112,18 +118,24 @@ body {
       color: $primary-color;
       font-size: 1rem;
       padding-bottom: 1rem;
+      font-weight: 500;
+      letter-spacing: 1.6px;
     }
     &--subtitle {
       color: $heading-color;
-      font-size: 3rem;
+      font-weight: 600;
+      font-size: 2.5rem;
       display: inline-block;
       max-width: 35rem;
-      line-height: 1;
+      line-height: 0.7;
       margin-bottom: 2.5rem;
+      letter-spacing: 1px;
     }
     &--text {
-      max-width: 30rem;
+      font-size: 1rem;
+      max-width: 34rem;
       line-height: 1.6;
+      font-weight: 600;
     }
   }
   &__image {
@@ -167,14 +179,17 @@ body {
       font-size: 1rem;
       padding-bottom: 1rem;
       font-weight: 600;
+      letter-spacing: 1.6px;
     }
     &--subtitle {
       color: $heading-color;
-      font-size: 3rem;
+      font-weight: 500;
+      font-size: 2.5rem;
       display: inline-block;
-      max-width: 33rem;
-      line-height: 0.6;
+      max-width: 35rem;
+      line-height: 0.7;
       margin-bottom: 2.5rem;
+      letter-spacing: 1px;
     }
   }
   &__image {
@@ -188,16 +203,17 @@ body {
   &__item {
     @include flex(center);
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 20rem;
+    gap: 1rem;
+    max-width: 21.1rem;
     &--title {
       font-size: 1.6rem;
       color: #000;
       font-weight: 500;
     }
     &--text {
+      font-size: 1rem;
       line-height: 1.6;
-      font-weight: 500;
+      font-weight: 600;
     }
   }
   &__image {
@@ -208,7 +224,7 @@ body {
       left: 5rem;
     }
     &--2 {
-      width: 10%;
+      width: 12%;
       position: absolute;
       top: 0;
       right: 10rem;
@@ -257,16 +273,22 @@ body {
       color: $primary-color;
       font-size: 1rem;
       padding-bottom: 1rem;
+      letter-spacing: 1.6px;
+      font-weight: 600;
     }
     &--subtitle {
       color: $heading-color;
-      font-size: 3rem;
+      font-weight: 500;
+      font-size: 2.5rem;
       display: inline-block;
-      max-width: 33rem;
-      line-height: 1;
+      max-width: 35rem;
+      line-height: 50px;
       margin-bottom: 2.5rem;
+      letter-spacing: 1px;
     }
     &--text {
+      font-size: 1rem;
+      font-weight: 600;
       line-height: 1.4;
       width: 27rem;
     }
@@ -276,38 +298,50 @@ body {
   }
 }
 .about {
-  background-image: url(./image/about_background.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./image/about_background.png);
+
   padding: 10rem 0rem 5rem;
   width: 100%;
   &__list {
     @include flex(center, center);
-    gap: 5rem;
+    gap: 3rem;
   }
   &__item {
     @include flex(center, center);
     flex-direction: column;
-    max-width: 20rem;
+    max-width: 23rem;
     text-align: center;
     &--image {
-      width: 30%;
+      width: 25%;
     }
     &--name {
-      padding: 1rem 0;
-      font-size: 2rem;
+      padding: 1rem 0 0.5rem 0;
+      font-size: 1.5 rem;
       color: #fff;
     }
     &--position {
+      font-size: 1rem;
+      font-weight: 500;
       color: $primary-color;
     }
     &--text {
       padding: 2rem 0 8rem;
       font-style: italic;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.4;
+      color: #fff;
+      opacity: 0.6;
+      letter-spacing: 1.2px;
+      height: 20rem;
     }
   }
   &__partner {
     @include flex(center, center);
     gap: 4rem;
     & img {
+      mix-blend-mode: lighter;
       width: 10%;
     }
   }
@@ -320,18 +354,24 @@ body {
       color: $primary-color;
       font-size: 1rem;
       padding-bottom: 1rem;
+      letter-spacing: 1.6px;
+      font-weight: 600;
     }
     &--subtitle {
       color: $heading-color;
-      font-size: 3rem;
+      font-weight: 500;
+      font-size: 2.5rem;
       display: inline-block;
-      max-width: 33rem;
-      line-height: 1;
+      max-width: 35rem;
+      line-height: 1.2;
       margin-bottom: 2.5rem;
+      letter-spacing: 1px;
     }
     &--text {
+      font-size: 1rem;
+      font-weight: 600;
       line-height: 1.6;
-      max-width: 35rem;
+      max-width: 40rem;
       margin: 0 auto;
       margin-bottom: 5rem;
     }
@@ -362,14 +402,18 @@ body {
       color: $primary-color;
       font-size: 1rem;
       padding-bottom: 1rem;
+      letter-spacing: 1.6px;
+      font-weight: 600;
     }
     &--subtitle {
       color: #fff;
-      font-size: 3rem;
+      font-weight: 500;
+      font-size: 2.5rem;
       display: inline-block;
-      max-width: 50rem;
-      line-height: 1;
+      max-width: 40rem;
+      line-height: 1.2;
       margin-bottom: 2.5rem;
+      letter-spacing: 1px;
     }
   }
   &__arrow {
@@ -380,9 +424,11 @@ body {
       top: 13rem;
     }
     & p {
+      font-weight: 400;
+      font-size: 1rem;
       color: #fff;
       position: absolute;
-      right: 16rem;
+      right: 14rem;
       top: 13rem;
     }
   }
@@ -398,12 +444,19 @@ body {
       border-radius: 3px;
       &::placeholder {
         color: #fff;
+        opacity: 0.8;
       }
     }
   }
   &__policy {
+    color: #fff;
+    opacity: 0.5;
+    font-weight: 400;
     padding-top: 5rem;
+    font-size: 1rem;
     & a {
+      color: #fff;
+      opacity: 0.8;
       text-decoration: underline;
     }
   }
@@ -414,11 +467,13 @@ body {
   position: relative;
   overflow: hidden;
   gap: 5rem;
+  font-size: 1rem;
   &__info {
-    max-width: 15rem;
+    max-width: 17rem;
     line-height: 1.5;
     position: relative;
     &--logo {
+      font-family: "Lato", sans-serif;
       font-size: 2rem;
       color: #000;
       margin-bottom: 1.5rem;
@@ -432,27 +487,31 @@ body {
       width: 20%;
       z-index: -1;
       top: 0;
-      left: 4rem;
+      left: 4.5rem;
     }
   }
   &__support {
     @include flex(flex-start, center);
     flex-direction: column;
     gap: 1rem;
+    font-weight: 500;
     &--title {
       color: #000;
       font-size: 1.6rem;
       margin-bottom: 2rem;
+      font-weight: 600;
     }
   }
   &__about {
     @include flex(flex-start, center);
     flex-direction: column;
     gap: 1rem;
+    font-weight: 500;
 
     &--title {
       color: #000;
       font-size: 1.6rem;
+      font-weight: 600;
       margin-bottom: 2rem;
     }
   }
@@ -460,10 +519,12 @@ body {
     @include flex(flex-start, center);
     flex-direction: column;
     gap: 1rem;
+    font-weight: 500;
 
     &--title {
       color: #000;
       font-size: 1.6rem;
+      font-weight: 600;
       margin-bottom: 2rem;
     }
     & form {
@@ -512,7 +573,7 @@ body {
 }
 //responsive desktop first
 // 1440 1366 1280 1024 768 480 320
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1367px) {
   .banner {
     &__heading {
       margin-bottom: 2rem;
@@ -526,8 +587,8 @@ body {
   .business {
     &__image {
       &--inner {
-        left: 23rem;
-        width: 46%;
+        left: 23.5rem;
+        width: 45%;
       }
     }
   }
@@ -538,14 +599,17 @@ body {
         top: 14rem;
       }
       & p {
-        right: 13rem;
+        right: 12rem;
         top: 14rem;
       }
     }
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1281px) {
+  .design {
+    padding-left: 5rem;
+  }
   .responsive {
     &__image {
       &--corner {
@@ -569,7 +633,7 @@ body {
         top: 14rem;
       }
       & p {
-        right: 12rem;
+        right: 10rem;
         top: 14rem;
       }
     }
@@ -581,14 +645,14 @@ body {
       height: 30rem;
       position: absolute;
       top: -10rem;
-      right: -40rem;
+      right: -42rem;
       width: 60rem;
 
       -webkit-transform: rotate(45deg);
     }
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .banner {
     height: 550px;
     background: url(./image/Banner.png) center/ 100% no-repeat;
@@ -609,12 +673,12 @@ body {
   }
 
   .design {
-    padding: 0rem 4rem;
     &__content {
+      padding: 2rem;
       &--subtitle {
         color: $heading-color;
         font-size: 2.5rem;
-        max-width: 20rem;
+        max-width: 25rem;
         line-height: 1;
         margin-bottom: 2.5rem;
       }
@@ -697,6 +761,7 @@ body {
   }
 
   .business {
+    padding-top: 5rem;
     &__image {
       &--inner {
         left: 17.5rem;
@@ -718,9 +783,7 @@ body {
         display: none;
       }
       & p {
-        color: #fff;
-        right: 15rem;
-        top: 26rem;
+        display: none;
       }
     }
     &__form {
@@ -749,11 +812,11 @@ body {
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .banner {
     height: 420px;
     &__heading {
-      max-width: 25rem;
+      max-width: 28rem;
       font-size: 2.5rem;
       padding-top: 1rem;
     }
@@ -778,16 +841,17 @@ body {
     }
   }
   .design {
-    padding: 0 0 0 2rem;
+    padding-left: 2rem;
     &__content {
+      padding: 1rem 0.5rem;
       &--subtitle {
-        font-size: 2.5rem;
+        font-size: 2rem;
         max-width: 20rem;
         line-height: 1;
         margin-bottom: 1.5rem;
       }
       &--text {
-        font-size: 1rem;
+        font-size: 0.75rem;
         max-width: 20rem;
         line-height: 1.6;
       }
@@ -810,6 +874,12 @@ body {
       flex-direction: column;
       gap: 2rem;
     }
+    &__item {
+      max-width: 20rem;
+      &--text {
+        font-size: 0.75rem;
+      }
+    }
   }
   .responsive {
     padding: 5rem 1rem;
@@ -821,12 +891,12 @@ body {
         width: 100%;
       }
       &--inner {
-        width: 70%;
-        top: 1rem;
-        left: 3.5rem;
+        width: 73%;
+        top: 2rem;
+        left: 5.2rem;
       }
       &--corner {
-        left: -95rem;
+        left: -85rem;
         -webkit-transform: rotate(-35deg);
       }
     }
@@ -838,9 +908,10 @@ body {
         font-size: 1.5rem;
       }
       &--subtitle {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       &--text {
+        font-size: 0.75rem;
         line-height: 1.4;
         width: 25rem;
       }
@@ -853,11 +924,12 @@ body {
       gap: 1rem;
     }
     &__item {
-      max-width: 20rem;
+      max-width: 25rem;
       &--image {
         width: 30%;
       }
       &--text {
+        height: 12rem;
         padding: 2rem 0 2rem;
       }
     }
@@ -879,8 +951,7 @@ body {
   .contact {
     &__arrow {
       & p {
-        right: 19rem;
-        top: 28.5rem;
+        display: none;
       }
     }
   }
@@ -896,7 +967,7 @@ body {
     }
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 481px) {
   .banner {
     height: 100%;
     &__heading {
@@ -924,7 +995,7 @@ body {
     &__content {
       &--subtitle {
         font-size: 1.5rem;
-        max-width: 20rem;
+        max-width: 25rem;
         line-height: 1;
         margin-bottom: 1.5rem;
       }
@@ -939,14 +1010,14 @@ body {
       height: 100%;
       width: 100%;
       &--corner {
-        right: -30rem;
+        right: -33rem;
       }
     }
   }
   .feature {
     &__content {
       &--subtitle {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 1.5rem;
       }
     }
@@ -992,17 +1063,18 @@ body {
     }
     &__content {
       text-align: center;
-      max-width: 25rem;
+      max-width: 20rem;
       &--title {
         padding-top: 1rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
       &--subtitle {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        line-height: 1.2;
       }
       &--text {
         line-height: 1.4;
-        width: 25rem;
+        width: 20rem;
       }
     }
   }
@@ -1019,7 +1091,7 @@ body {
     &__content {
       &--subtitle {
         color: $heading-color;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       &--text {
         line-height: 1.6;
@@ -1036,6 +1108,11 @@ body {
     }
   }
   .contact {
+    &__content {
+      &--subtitle {
+        font-size: 1.5rem;
+      }
+    }
     &__arrow {
       & p {
         display: none;
@@ -1053,7 +1130,7 @@ body {
     }
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
   .banner {
     height: 170px;
     &__heading {
@@ -1072,17 +1149,17 @@ body {
     }
   }
   .btn {
-    padding: 1rem 3rem;
+    padding: 0.5rem 2rem;
   }
   .design {
     padding-top: 2rem;
     padding-left: 0;
     &__content {
       &--subtitle {
-        max-width: 20rem;
+        max-width: 18rem;
       }
       &--text {
-        max-width: 20rem;
+        max-width: 18rem;
       }
     }
     &__image {
@@ -1094,6 +1171,8 @@ body {
     }
   }
   .feature {
+    padding-left: 1rem;
+    padding-right: 1rem;
     &__content {
       &--subtitle {
         font-size: 1.5rem;
@@ -1118,17 +1197,18 @@ body {
       }
     }
     &__content {
-      max-width: 12rem;
+      max-width: 18rem;
       &--title {
         font-size: 1rem;
       }
       &--subtitle {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        
       }
       &--text {
         text-align: center;
         line-height: 1.4;
-        width: 12rem;
+        width: 18rem;
       }
     }
   }
@@ -1149,7 +1229,7 @@ body {
       }
       &--text {
         line-height: 1.6;
-        max-width: 25rem;
+        max-width: 18rem;
         margin: 0 auto;
         margin-bottom: 2rem;
       }
